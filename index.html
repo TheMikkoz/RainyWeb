@@ -6,17 +6,19 @@
     <title>Unity WebGL Player | Rainy 2</title>
   </head>
   <body style="text-align: center">
-    <canvas id="unity-canvas" style="width: 800px; height: 800px; background: #231F20"></canvas>
-    <script src="Build/testBuild.loader.js"></script>
+    <canvas id="unity-canvas" width=800 height=800 style="width: 800px; height: 800px; background: #231F20"></canvas>
+    <script src="Build/TestBuild.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/testBuild.data.br",
-        frameworkUrl: "Build/testBuild.framework.js.br",
-        codeUrl: "Build/testBuild.wasm.br",
+        dataUrl: "Build/TestBuild.data.br",
+        frameworkUrl: "Build/TestBuild.framework.js.br",
+        codeUrl: "Build/TestBuild.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Mikko Jyrkäs",
         productName: "Rainy 2",
         productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
     </script>
   </body>
