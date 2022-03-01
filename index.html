@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Rainy 2</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 800px; height: 800px; background: #231F20"></canvas>
+    <script src="Build/testBuild.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/testBuild.data.br",
+        frameworkUrl: "Build/testBuild.framework.js.br",
+        codeUrl: "Build/testBuild.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Mikko Jyrkäs",
+        productName: "Rainy 2",
+        productVersion: "1.0",
+      });
+    </script>
+  </body>
+</html>
